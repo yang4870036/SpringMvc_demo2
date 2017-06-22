@@ -22,30 +22,38 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
   
   <body>
     This is my JSP page. <br>
-    <a href="hello/helloSpring">helloworld</a>
+    <a href="hello/helloSpring">helloworld</a><br><br>
     
     <form action="SpringMVC/testMethod" method="GET">
-    <button >hello</button>
-    </form>
+    <button >method=Get</button>
+    </form><br>
     
     <form action="SpringMVC/testMethod2?name=zhu&age=10" method="POST">
-    <button >hello</button>
-    </form>
+    <button >method=Post</button>
+    </form><br>
     
-    <a href="SpringMVC/helloAnt/2/a">helloAnt</a>
+    <a href="SpringMVC/helloAnt/2/a">helloAnt</a><br><br>
     
     <form action="SpringMVC/testMethod3/20/dcdcdc" method="post">
   		<input type="hidden" value="PUT" name="_method"> 
   		<input type="submit" value="Put"/>
-    </form>
+    </form><br>
     
-     <a href="SpringMVC/testMethod4?id=20">helloparam</a>
+    <form action="SpringMVC/testDelete/20/dcdcdc" method="post">
+  		<input type="hidden" value="DELETE" name="_method"> 
+  		<input type="submit" value="DELETE"/>
+    </form> <br>
+    
+     SubmitParam:1
+    <a href="SpringMVC/testMethod4?id=20">helloparam</a><br><br>
      
-      <form action="SpringMVC/testMethod4" method="post">
+    SubmitParam:2
+    <form action="SpringMVC/testMethod4" method="post">
   		<input name=id> </iput>
   		<input type="submit" value="Put"/>
-    </form>
+    </form><br>
     
+    PojoTest:
     <form action="SpringMVC/testMethodPojo" method="post">
   		username:<input name=username values=""> </iput><br>
   		password:<input name=password values=""> </iput><br>
@@ -54,10 +62,10 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
   		    line:<input name=address.line values=""> </iput><br>
   		    city:<input name=address.city values=""> </iput><br>
   		province:<input name=address.province values=""> </iput><br>
-  		
   		<input type="submit" value="submit"/>
-    </form>
+    </form><br>
     
-    <a href="SpringMVC/testMethodMap">testMethodMap</a>
+    TestMap:
+    <a href="SpringMVC/testMethodMap">testMethodMap</a><br>
   </body>
 </html>
